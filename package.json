@@ -1,20 +1,19 @@
 {
-  "name": "mooc_git-entrega1_merge",
-  "version": "",
-  "author": "ging",
+  "name": "MOOC_quiz_mod3-commit_entrega",
+  "author": "ging-moocs",
   "license": "AGPL-3.0",
   "engines": {
-    "node": "^8.9.4"
-  },
-  "private": true,
-  "scripts": {
-    "checks": "node tests/launcher.js"
+    "node": "^12.16.0"
   },
   "dependencies": {
-    "underscore": "*",
     "fs-extra": "*",
-    "mocha": "*",
-    "chai": "*",
+    "underscore": "*",
     "simple-git": "*"
+  },
+  "info": {
+    "githubURL": "ging-moocs/MOOC_quiz_mod3-commit_entrega",
+    "serverUrl": "https://autocorector.dit.upm.es/",
+    "courseId": "3",
+    "assignmentId": "12"
   }
 }
