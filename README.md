@@ -126,8 +126,8 @@ $ git push origin master
 Para ayudar al desarrollo, se provee una herramienta de autocorrección que prueba las distintas funcionalidades que se piden en el enunciado. Para utilizar esta herramienta debes tener node.js (y npm) ([https://nodejs.org/es/](https://nodejs.org/es/)) y Git instalados. Primero ejecute los siguientes comandos en un directorio diferente al de la práctica:
 
 ```
-$ git clone https://github.com/ging-moocs/MOOC_quiz_mod3-merge_entrega
-$ cd MOOC_quiz_mod3-merge_entrega
+$ git clone https://github.com/ging-moocs/MOOC_git_mod3-commit_entrega
+$ cd MOOC_git_mod3-commit_entrega
 ```
 
 A continuación guarde en un fichero llamado 'git_account' su nombre de usuario de GitHub
