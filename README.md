@@ -128,6 +128,7 @@ Para ayudar al desarrollo, se provee una herramienta de autocorrección que prue
 ```
 $ git clone https://github.com/ging-moocs/MOOC_git_mod3-commit_entrega
 $ cd MOOC_git_mod3-commit_entrega
+$ npm install
 ```
 
 A continuación guarde en un fichero llamado 'git_account' su nombre de usuario de GitHub
@@ -153,7 +154,7 @@ $ npx moocauto                 ## Pasa los tests al fichero a entregar
 
 Se puede pasar la herramienta de autocorrección tantas veces como se desee.
 
-RUBRICA: La resolución de cada uno de estos puntos dará un el % indicado de la nota total: 
--	20%:  Existe el repositorio my_calculator 
--	40%:  El primer commit de la rama master es “x^3 button” y contiene lo pedido
--	40%:  El segundo commit de la rama master es “x^4 button” y contiene lo pedido
+**RUBRICA**: La resolución de cada uno de estos puntos dará un el % indicado de la nota total: 
+-	**20%:**  Existe el repositorio my_calculator 
+-	**40%:**  El primer commit de la rama master es “x^3 button” y contiene lo pedido
+-	**40%:**  El segundo commit de la rama master es “x^4 button” y contiene lo pedido
