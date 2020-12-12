@@ -15,9 +15,10 @@
 
 En esta práctica crearemos nuestro primer repositorio de Github. Para ello, primero habrá que crear una cuenta en [Github](https://github.com). Crearemos un repositorio de nombre **my_calculator** en dicha cuenta, en el que alojaremos un pequeño desarrollo de software consistente en una calculadora web. 
 
-Para comenzar este desarrollo, iniciamos un repositorio de git local. En la rama master se desarrollará en dos commits una calculadora con 2 botones. En el primer commit  se añade la calculadora con el botón x^3, además de un fichero README.md con un breve texto descriptivo. En el segundo se añade el botón x^4 a la calculadora. 
+Para comenzar este desarrollo, iniciamos un repositorio de git local. En la rama main se desarrollará en dos commits una calculadora con 2 botones. En el primer commit  se añade la calculadora con el botón x^3, además de un fichero README.md con un breve texto descriptivo. En el segundo se añade el botón x^4 a la calculadora. 
 
-Para terminar se sube la rama master del repositorio local al repositorio remoto en Github que hemos creado al principio.
+Para terminar se sube la rama main del repositorio local al repositorio remoto en Github que hemos creado al principio.
+
 
 
 ## Tareas
@@ -65,7 +66,7 @@ Añadir al directorio de trabajo un fichero con el nombre "index.html". Este fic
 En la etiqueta h1 debes modificar el texto para incluir tu nombre y apellidos
 
 ### Paso 4: Registrar cambios
-A continuación, hay que registrar los ficheros en el índice y crear el primer commit en la rama master. Se recuerda que antes de crear un commit hay que probar siempre que el programa que se va a guardar funciona correctamente (en este caso, abriéndolo en el navegador web y probando que funciona la calculadora).
+A continuación, hay que registrar los ficheros en el índice y crear el primer commit en la rama main. Se recuerda que antes de crear un commit hay que probar siempre que el programa que se va a guardar funciona correctamente (en este caso, abriéndolo en el navegador web y probando que funciona la calculadora).
 
 ```
 $ git add index.html # Añadir el fichero creado
@@ -74,7 +75,7 @@ $ git log --oneline # Ver la lista de commits
 ```
 
 ## Paso 5: Crear un segundo commit
-Debe crear un segundo commit en la rama en la que está trabajando (master). 
+Debe crear un segundo commit en la rama en la que está trabajando (main). 
 El commit debe añadir a la calculadora (fichero index.html) un segundo botón (elemento HTML `<button ..>`) que eleve un número a la cuarta potencia (x^4) invocando una función (power_4 ()) que calcula x^4 al hacer click en él.
 
 ```
@@ -118,7 +119,7 @@ $ git commit -m "x^4 button"
 Para finalizar, hay que subir el repositorio local al repositorio remoto creado en Github inicialmente.
 
 ```
-$ git push origin master
+$ git push origin main
 ```
 
 ## Prueba de la práctica 
@@ -172,5 +173,5 @@ Dado que es un curso para principiantes, ante la duda les pedimos que sean benev
 
 **RUBRICA**: La resolución de cada uno de estos puntos dará un el % indicado de la nota total: 
 -	**20%:**  Existe el repositorio my_calculator 
--	**40%:**  El primer commit de la rama master es “x^3 button” y contiene lo pedido
--	**40%:**  El segundo commit de la rama master es “x^4 button” y contiene lo pedido
+-	**40%:**  El primer commit de la rama main es “x^3 button” y contiene lo pedido
+-	**40%:**  El segundo commit de la rama main es “x^4 button” y contiene lo pedido

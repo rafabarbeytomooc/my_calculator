@@ -24,8 +24,8 @@ const PATH_REPO = path.join(PATH_ASSIGNMENT, REPO_NAME);
 let error_critical = null;
 let output = null;
 let branches = null;
-let commit_1_master = null;
-let commit_2_master = null;
+let commit_1_main = null;
+let commit_2_main = null;
 let commit_head_sine = null;
 let student = null;
 let REPO_URL = "";
@@ -44,13 +44,13 @@ describe('Commit', function () {
         should.exist(student);
     });
 
-    it("(Prechecks) Buscando la rama master", async function () {
+    it("(Prechecks) Buscando la rama main", async function () {
         this.score = 1;
-        this.msg_ok = `Se ha encontrado la rama master ${REPO_URL}`;
+        this.msg_ok = `Se ha encontrado la rama main ${REPO_URL}`;
         [_, _] = await to(fs.remove(PATH_REPO));
         [error_repo, _] = await to(mygit.clone(REPO_URL));
         if (error_repo) {
-            this.msg_err = `No se encuentra rama master en ${REPO_URL}`;
+            this.msg_err = `No se encuentra rama main en ${REPO_URL}`;
             error_critical = this.msg_err;
             should.not.exist(error_critical);
         }
@@ -58,7 +58,7 @@ describe('Commit', function () {
         should.not.exist(error_repo);
     });
 
-    it("Buscando commits en la rama master", async function () {
+    it("Buscando commits en la rama main", async function () {
         this.score = 2.5;
         if (error_critical) {
             this.msg_err = error_critical;
@@ -70,27 +70,29 @@ describe('Commit', function () {
                 error_critical = this.msg_err;
                 should.not.exist(error_critical);
             }
+            
             if (log.all.length < 2){
                 this.msg_err = `Se esperaban por lo menos 2 commits en ${REPO_URL}. Resultado: ${log.all.length}`;
                 error_critical = this.msg_err;
                 should.not.exist(error_critical);
             }
-            commit_1_master = log.all[log.all.length - 1].hash.substring(0, 7);
-            commit_2_master = log.all[log.all.length - 2].hash.substring(0, 7);
-            if (!commit_1_master) {
-                this.msg_err = `Error: al leer el commit en la rama master.\n\t\t\tResultado: ${log.all[log.all.length - 1]}`;
+
+            commit_1_main = log.all[log.all.length - 1].hash.substring(0, 7);
+            commit_2_main = log.all[log.all.length - 2].hash.substring(0, 7);
+            if (!commit_1_main) {
+                this.msg_err = `Error: al leer el commit en la rama main.\n\t\t\tResultado: ${log.all[log.all.length - 1]}`;
                 error_critical = this.msg_err;
                 should.not.exist(error_critical);
 
             }
-            [error_commit, output] = await to(mygit.show([commit_1_master, '--name-only', '--pretty=format:']));
+            [error_commit, output] = await to(mygit.show([commit_1_main, '--name-only', '--pretty=format:']));
             if (error_commit) {
-                this.msg_err = `Error al leer el commit ${commit_1_master} de la rama master`;
+                this.msg_err = `Error al leer el commit ${commit_1_main} de la rama main`;
                 error_critical = this.msg_err;
                 should.not.exist(error_critical);
             }
-            this.msg_ok = `Se ha encontrado el primer commit en la rama master ${commit_1_master}`;
-            this.msg_err = `No se encuentra el primer commit de la rama master ${commit_1_master}`;
+            this.msg_ok = `Se ha encontrado el primer commit en la rama main ${commit_1_main}`;
+            this.msg_err = `No se encuentra el primer commit de la rama main ${commit_1_main}`;
         }
     });
 
@@ -101,8 +103,8 @@ describe('Commit', function () {
             this.msg_err = error_critical;
             should.not.exist(error_critical);
         } else {
-            this.msg_ok = `Se ha encontrado el fichero '${expected}'  en el primer commit del la rama master ${commit_1_master}`;
-            this.msg_err = `El fichero '${expected}' no se encuentra en el primer commit de la rama master ${commit_1_master}`;
+            this.msg_ok = `Se ha encontrado el fichero '${expected}'  en el primer commit del la rama main ${commit_1_main}`;
+            this.msg_err = `El fichero '${expected}' no se encuentra en el primer commit de la rama main ${commit_1_main}`;
 
             Utils.search(expected, output).should.be.equal(true);
         }
@@ -116,12 +118,12 @@ describe('Commit', function () {
             should.not.exist(error_critical);
         } else {
             let output;
-            this.msg_ok = `Se ha encontrado el fichero '${expected}'  en el primer commit del la rama master ${commit_2_master}`;
-            this.msg_err = `El fichero '${expected}' no se encuentra en el primer commit de la rama master ${commit_2_master}`;
+            this.msg_ok = `Se ha encontrado el fichero '${expected}'  en el primer commit del la rama main ${commit_2_main}`;
+            this.msg_err = `El fichero '${expected}' no se encuentra en el primer commit de la rama main ${commit_2_main}`;
 
-            [error_show, output] = await to(mygit.show([commit_2_master]));
+            [error_show, output] = await to(mygit.show([commit_2_main]));
             if (error_show){
-                this.msg_err = `Error al leer el commit ${commit_2_master} de la rama master`;
+                this.msg_err = `Error al leer el commit ${commit_2_main} de la rama main`;
                 error_critical = this.msg_err;
                 should.not.exist(error_critical);
             }
@@ -129,7 +131,7 @@ describe('Commit', function () {
         }
     });
 
-    it("Buscando x^4 en los commits de la rama master", async function () {
+    it("Buscando x^4 en los commits de la rama main", async function () {
         const expected = "x^4";
         this.score = 2.5;
         if (error_critical) {
@@ -137,9 +139,9 @@ describe('Commit', function () {
             should.not.exist(error_critical);
         } else {
             let output;
-            this.msg_ok = `Se ha encontrado '${expected}' en la rama master ${commit_2_master}`;
-            this.msg_err = `No se ha encontrado'${expected}' en la rama master ${commit_2_master}`;
-            [err_show, output] = await to(mygit.show([commit_2_master]));
+            this.msg_ok = `Se ha encontrado '${expected}' en la rama main ${commit_2_main}`;
+            this.msg_err = `No se ha encontrado'${expected}' en la rama main ${commit_2_main}`;
+            [err_show, output] = await to(mygit.show([commit_2_main]));
             Utils.search(expected, output).should.be.equal(true);
         }
     });
