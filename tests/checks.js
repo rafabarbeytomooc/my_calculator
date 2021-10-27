@@ -5,7 +5,7 @@
 
 // IMPORTS
 const git = require('simple-git/promise');
-const Utils = require("./utils");
+const Utils = require("./testutils");
 const to = require("./to");
 const path = require('path');
 const fs = require('fs-extra');

@@ -3,12 +3,13 @@
   "author": "ging-moocs",
   "license": "AGPL-3.0",
   "engines": {
-    "node": "^12.16.0"
+    "node": "^16.8.0",
+    "npm": "^7.21.0"
   },
   "dependencies": {
     "fs-extra": "*",
-    "underscore": "*",
-    "simple-git": "*"
+    "simple-git": "*",
+    "underscore": "^1.13.1"
   },
   "info": {
     "githubURL": "ging-moocs/MOOC_git_mod3-commit_entrega",
