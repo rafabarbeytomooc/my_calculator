@@ -1,11 +1,16 @@
 // IMPORTS
 const git = require('simple-git/promise');
 const Utils = require("./testutils");
-const to = require("./to");
 const path = require('path');
 const fs = require('fs-extra');
 
-
+const to = function(promise) {
+    return promise
+        .then(data => {
+            return [null, data];
+        })
+        .catch(err => [err]);
+};
 
 
 // CONSTS
