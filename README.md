@@ -4,9 +4,9 @@
 
 <br/><br/><br/>
 
-# Módulo 3: Repositorios local y remoto, directorio de trabajo, commit, raw máster (principal), ramas remotas, GitHub y los comandos Git: add, checkout, diff, init, log, mv, reset, rm, status y commit - Entrega P2P: Commit
+# Módulo 3: Repositorios local y remoto, directorio de trabajo... - Entrega P2P: Commit
 
-Versión: 27 de octubre de 2021
+Versión: 30 de octubre de 2021
 
 ## Objetivos
  * Crear repositorios en Github
