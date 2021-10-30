@@ -2,6 +2,7 @@
   "name": "MOOC_git_mod3-commit_entrega",
   "author": "ging-moocs",
   "license": "AGPL-3.0",
+  "version": "0.0.0",
   "engines": {
     "node": "^16.8.0",
     "npm": "^7.21.0"

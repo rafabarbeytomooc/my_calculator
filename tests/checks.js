@@ -45,7 +45,7 @@ describe('Commit', function () {
     });
 
     it("(Prechecks) Buscando la rama main", async function () {
-        this.score = 1;
+        this.score = 2;
         this.msg_ok = `Se ha encontrado la rama main ${REPO_URL}`;
         [_, _] = await to(fs.remove(PATH_REPO));
         [error_repo, _] = await to(mygit.clone(REPO_URL));
@@ -59,7 +59,7 @@ describe('Commit', function () {
     });
 
     it("Buscando commits en la rama main", async function () {
-        this.score = 2.5;
+        this.score = 2;
         if (error_critical) {
             this.msg_err = error_critical;
             should.not.exist(error_critical);
@@ -98,7 +98,7 @@ describe('Commit', function () {
 
     it("Buscando el fichero index.html en el primer commit", async function () {
         const expected = "index.html";
-        this.score = 2.5;
+        this.score = 2;
         if (error_critical) {
             this.msg_err = error_critical;
             should.not.exist(error_critical);
@@ -112,7 +112,7 @@ describe('Commit', function () {
 
     it("Buscando el fichero index.html en el segundo commit", async function () {
         const expected = "index.html";
-        this.score = 2.5;
+        this.score = 2;
         if (error_critical) {
             this.msg_err = error_critical;
             should.not.exist(error_critical);
@@ -133,7 +133,7 @@ describe('Commit', function () {
 
     it("Buscando x^4 en los commits de la rama main", async function () {
         const expected = "x^4";
-        this.score = 2.5;
+        this.score = 2;
         if (error_critical) {
             this.msg_err = error_critical;
             should.not.exist(error_critical);

@@ -26,7 +26,7 @@ Para terminar se sube la rama main del repositorio local al repositorio remoto e
 ## Tareas
 
 ### Paso 1: Creación de repositorio remoto
-El primer paso a seguir es crear una cuenta en Github, si no se tiene. A continuación, creamos un nuevo repositorio con el nombre "my_calculator".
+El primer paso a seguir es crear una cuenta en Github, si no se tiene. A continuación, creamos un nuevo repositorio público vacío con el nombre "my_calculator".
 
 ### Paso 2: Creación de repositorio local
 En un terminal de nuestro ordenador iniciamos un repositorio local de git. Si se tiene el sistema operativo Windows, se recomienda emplear [Git Bash](https://gitforwindows.org/) como terminal.
@@ -36,12 +36,12 @@ $ cd my_calculator
 ```
 y le asignamos el repositorio remoto que acabamos de crear
 ```
-$ git remote add origin git@github.com/<mi usuario de github>/my_calculator.git
+$ git remote add origin git@github.com:<mi usuario de github>/my_calculator.git
 ```
 
 Por ejemplo, si tu usuario es `pepe`, el comando sería:
 ```
-$ git remote add origin git@github.com/pepe/my_calculator.git
+$ git remote add origin git@github.com:pepe/my_calculator.git
 ```
 
 ### Paso 3: Añadir ficheros al repositorio
@@ -140,7 +140,7 @@ $ cd MOOC_git_mod3-commit_entrega
 $ npm install
 ```
 
-A continuación guarde en un fichero llamado 'git_account' su nombre de usuario de GitHub
+A continuación, en el directorio `MOOC_git_mod3-commit_entrega` guarde en un fichero llamado 'git_account' su nombre de usuario de GitHub
 ```
 echo "mi_nombre_de_usuario_en_github" >> git_account
 ```
@@ -161,7 +161,7 @@ $ npx autocorector             ## Pasa los tests al fichero a entregar
 ... (resultado de los tests)
 ```
 
-Se puede pasar la herramienta de autoorrección tantas veces como se desee sin ninguna repercusión en la calificación.
+Se puede pasar la herramienta de autocorrección tantas veces como se desee sin ninguna repercusión en la calificación.
 
 ## Instrucciones para la Entrega y Evaluación.
 
