@@ -47,7 +47,7 @@ $ git remote add origin git@github.com:pepe/my_calculator.git
 ### Paso 3: Añadir ficheros al repositorio
 
 Añadir al directorio de trabajo un fichero con el nombre "index.html". Este fichero contendrá una calculadora web con un botón para calcular el cubo del número introducido:
-```
+```html
 <!DOCTYPE html>
 <html>
 	<head>
