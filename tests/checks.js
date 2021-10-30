@@ -1,8 +1,3 @@
-/**
- * Checker Script for mooc_git-entrega1_merge
- */
-
-
 // IMPORTS
 const git = require('simple-git/promise');
 const Utils = require("./testutils");

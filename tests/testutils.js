@@ -1,7 +1,3 @@
-/*
-  Common utilities for all assignments
- */
-
 const _ = require("underscore");
 const Utils = {};
 
