@@ -3,6 +3,14 @@ const Utils = {};
 
 const REG_URL = /(\b(http|ftp|https|ftps):\/\/[-A-ZáéíóúÁÉÍÓÚ0-9+&@#\/%?=~_|!:,.;]*[-A-ZáéíóúÁÉÍÓÚ0-9+&@#\/%=~_|])/ig;
 
+Utils.to = (promise) => {
+    return promise
+        .then(data => {
+            return [null, data];
+        })
+        .catch(err => [err]);
+};
+
 Utils.getURL = (string) => {
     const urls = string.match(REG_URL);
     let url = null;
